@@ -1,0 +1,121 @@
+/*
+This is a good layout for a mobile-first CSS template.
+Following this flow will minimize the number of styles you need to write and will ensure you are thinking, designing and developing mobile-first.
+Most of your styles get written like standard CSS, but for your mobile presentation. Generally speaking, a good mobile presention will stretch out nicely for larger screens.
+
+Sometimes, when we stretch out to larger screens, we need to make minor tweaks for the larger devices -- you can make these tweaks in the tablet media query, or if the issue exists on desktop only, the desktop media query.
+You will find this is far easier than the opposite task of using CSS to cram your desktop experience into a mobile device.
+*/
+/*********************************************************************
+ LOADS IN A NICE RESET TO ENSURE ALL BROWSERS HAVE THE SAME BASE STYLES
+*********************************************************************/
+@import url('https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css');
+
+/*********************************************************************
+  YOUR MOBILE/BASE STYLES GO HERE
+*********************************************************************/
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    /* Sets default font-size to 16px, ensuring 1em = 16px; */
+    font-size: 16px;
+
+
+}
+
+
+body{
+    background: linear-gradient(to bottom, #1c1b22 95%, #CE9F39 100%);
+    color: #CE9F39;
+    font-family: 'Bona Nova',serif; font-size: 23px;
+    text-align: left;
+
+}
+
+.head{
+    text-align: center;
+}
+
+.date{
+    text-align: left;
+    padding: 0px;
+    margin: 0px 0px 40px 30px;
+    font-size: 18px;
+}
+
+.byline{
+    text-align: left;
+    padding: 0px;
+    margin: -30px 0px -45px 30px;
+    font-size: 28px;
+}
+
+.para{
+    margin: 0px 0px -10px 0px;
+    padding: 30px 0px 0px 25px;
+    border-style: outset;
+    border-bottom: none;
+    border-width: 5px;
+}
+
+.para2{
+    margin: -30px 0px 0px 0px;
+    padding: 30px 0px 0px 25px;
+    border-style: outset;
+    border-top: none;
+    border-width: 5px;
+}
+
+.map{
+    padding: 30px;
+}
+
+
+/* I don't understand why this isn't working */
+/* I figured it out, I did not have the class in the right spot*/
+.imgtop{
+    display: block;
+    width: 100%;
+    max-width: 1920px;
+    max-height: auto;
+}
+
+.mid{
+    display: block;
+    width: 100%;
+    max-width: 1920px;
+    max-height: auto;
+}
+
+.bot{
+    display: block;
+    width: 100%;
+    max-width: 1920px;
+    max-height: auto;
+}
+
+/*********************************************************************
+  YOUR TABLET/DESKTOP STYLES GO HERE
+*********************************************************************/
+@media(min-width: 681px) {
+    /* Any adjustments for tablets and larger go here.
+    Note these styles will be applied to anything 681px or larger -- so tablet AND desktop */
+
+.top{display: flex;
+}
+
+.top > div{
+        flex-basis: 20%;
+}
+
+}
+
+/*********************************************************************
+  YOUR DESKTOP-ONLY STYLES GO HERE
+*********************************************************************/
+@media(min-width: 729px) {
+    /* Any adjustments for desktop and larger go here.
+    Note these styles will be applied to anything 729px or larger -- so desktop */
+}
